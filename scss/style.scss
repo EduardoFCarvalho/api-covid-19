@@ -1,0 +1,165 @@
+//imports
+@import "variables";
+@import "header";
+@import "cta";
+@import "footer";
+@import "privacidade";
+@import "whats";
+  
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: $font_1;
+}
+
+body {
+	background-color: $bgd-body;
+	position: relative;
+	overflow-x: hidden;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	transition: 0.4s ease;
+}
+
+p {
+	color: #171717;
+	margin-bottom: 15px;
+	font-size: 1em;
+	line-height: 22px;
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+section {
+	overflow-x: hidden;
+}
+
+.section-padding {
+	padding-top: 5rem;
+	padding-bottom: 5rem;
+	h2,
+	h3,
+	h4,
+	p,
+	span {
+		display: block;
+		margin-bottom: 1.25rem;
+	}
+	p {
+		line-height: 1.5rem;
+	}
+}
+
+.go-to-top {
+	background: $theme-color3;
+	height: 55px;
+	width: 55px;
+	right: 15px;
+	bottom: 10px;
+	position: fixed;
+	z-index: 10;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 50%;
+	border: 2px solid transparent;
+	box-shadow: 0 0 10px 3px rgba(108, 98, 98, 0.2);
+	color: #1f1f1f;
+	text-decoration: none;
+	transition: all 0.4s;
+	display: none;
+	cursor: pointer;
+
+	i {
+		display: block;
+		line-height: 52px;
+		color: #fff;
+	}
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+	scrollbar-width: auto;
+	scrollbar-color: $theme-color #ffffff;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+	width: 11px;
+}
+
+*::-webkit-scrollbar-track {
+	background: #f5f5f5;
+	border-radius: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+	background-color: $theme-color;
+	border-radius: 10px;
+	border: 3px solid #ffffff;
+
+	&:hover {
+		background-color: $theme-color2;
+	}
+}
+
+.h-100 {
+	height: 100% !important;
+}
+
+.white-bgd {
+	background-color: #fff !important;
+}
+
+.light-bgd {
+	background-color: #f0f0f0 !important;
+}
+
+.medium-bgd {
+	background-color: gray;
+}
+
+.heavy-bgd {
+	background-color: gray;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+
+.h2 {
+	font-size: 3rem;
+	font-weight: 900;
+	line-height: 3.75rem;
+	margin-bottom: 1rem;
+
+	@media (max-width: 768px) {
+		font-size: 2.5rem;
+		line-height: 3rem;
+	}
+
+	@media (max-width: 576px) {
+		font-size: 2rem;
+		line-height: 2.25rem;
+	}
+}
+
+.w-100 {
+	width: 100% !important;
+}
+
+.h-100 {
+	height: 100% !important;
+}
