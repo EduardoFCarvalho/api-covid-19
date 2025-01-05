@@ -1,0 +1,62 @@
+.countryForm {
+  select {
+    width: 100%;
+    max-width: 250px;
+    height: 30px;
+    border-radius: 8px;
+  }
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid $theme-color2;
+  border-radius: 8px;
+  background-color: lighten($theme-color2, 40);
+
+  .card-body{
+    display: flex;
+    justify-content: space-evenly;
+    .card-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 0 10px;
+    }
+
+    .check {
+      color: darken($theme-color, 10);
+    }
+    .cross {
+      color: darken($theme-color3, 10);
+    }
+  }
+
+  &.casos,
+  &.obitos {
+    padding: 2rem;
+    text-align: center;
+    .card-title {
+      font-size: 1.5rem;
+    }
+    .card-body {
+      .card-text {
+        font-size: 1.125rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.casos {
+    border-color: $theme-color;
+    background-color: lighten($theme-color, 30);
+  }
+  &.obitos {
+    border-color: $theme-color3;
+    background-color: lighten($theme-color3, 30);
+  }
+
+  .card-title {
+    text-align: center;
+  }
+}

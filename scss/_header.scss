@@ -170,9 +170,10 @@ header {
             -webkit-backdrop-filter: blur(6px);
             // border-radius: 10px;
             border: 1px solid rgba(255, 255, 255, 0.18);
-            transition: 0.3s ease;
+            transition: all 0.3s ease;
             max-width: 100%;
             overflow: hidden;
+            z-index: 1000;
 
             .logo {
                 @media (max-width: 767px) {
@@ -200,7 +201,7 @@ header {
                     height: 100%;
                     background: rgba(255, 255, 255, 0.85);
                     backdrop-filter: blur(10px);
-                    transition: 0.3s ease;
+                    transition: all 0.3s ease;
                 }
             }
 
