@@ -3,13 +3,20 @@ async function runComonsScripts() {
   if (domLoaded) {
     const headerMenu = document.querySelector('.header-menu-area');
     const btnToTop = document.querySelector('#back-top');
+    let scrollDiff;
 
-    function checkScrollYPosition() {
+    function checkScrollYPosition(ev) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      console.log(`scrollTop: ${scrollTop}`);
 
       scrollTop = Math.round(scrollTop); // arredonda para o valor inteiro mais próximo
+      if (scrollDiff !== scrollTop) {
+        scrollDiff = scrollTop
+      } else {
+        return false;
+      }
 
-      if (scrollTop > 400) {
+      if (scrollTop > 250) {
         if (headerMenu) {
           headerMenu.classList.add('sticky-menu');
           // headerMenu.querySelector('.logo img').setAttribute('src', 'img/logo/logo1.png');
@@ -42,8 +49,7 @@ async function runComonsScripts() {
       });
     }
 
-    window.addEventListener('scroll', checkScrollYPosition);
-
+    // window.addEventListener('scroll', checkScrollYPosition);
 
   }
 } runComonsScripts()
