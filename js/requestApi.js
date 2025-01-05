@@ -16,7 +16,15 @@ formsSelects.forEach(formSelect => {
 
     const selectedCountry = formSelect.value;
 
-    fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`)
+    // fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`)
+    //   .then(response => response.json())
+    fetch(`register_access.php?pais=${selectedCountry}`)
+      .then(registerResponse => {
+        if (!registerResponse.ok) {
+          console.error('Erro ao registrar acesso no banco de dados');
+        }
+        return fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`);
+      })
       .then(response => response.json())
       .then(data => {
         let totalConfirmados = 0;

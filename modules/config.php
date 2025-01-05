@@ -47,3 +47,10 @@ define("DEBUG_EMAIL",true);
 // ========== RECAPTCHAR ==========
 
 define("CONF_RECAPTCHA_KEY","");
+
+// ========== DATABASE CONFIG ==========
+  // Altere aqui os valores das cofigurações do banco de dados conforme você criou
+define("CONF_DB_HOST", "localhost");
+define("CONF_DB_NAME", "access-api-covid19");
+define("CONF_DB_USER", "root");
+define("CONF_DB_PASS", "");

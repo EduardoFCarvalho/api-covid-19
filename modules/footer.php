@@ -1,11 +1,15 @@
 <footer class="bg-dark footer-theme">
     <div class="container">
         <div class="row justify-content-between">
+
+            <div class="col-12">
+                <div id="last-country" class="last-country mb-4">
+                    <!-- Informações do último país pesquisado serão inseridas aqui -->
+                </div>
+
+            </div>
             <div class="col-12 col-lg-4 mb-5">
                 <div>
-                    <a href="./">
-                        <img src="img/logo/logo.png" alt="Logo api covid 19">
-                    </a>
                     <p class="text-justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, fugit. Ad quaerat fugit quas nam nobis quam porro quis deleniti aspernatur, nesciunt nemo laudantium fuga vero voluptatem? Sed, necessitatibus iure!</p>
                 </div>
             </div>

@@ -96,6 +96,34 @@
   <?php include 'modules/footer.php' ?>
 
   <?php include 'modules/js.geral.php' ?>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Requisição para buscar o último país pesquisado
+      fetch('get_last_country.php')
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'success') {
+            const lastCountry = data.data.pais;
+            const lastUpdated = new Date(data.data.updated_at).toLocaleString('pt-BR');
+
+            // Exibir as informações na página
+            const lastCountryElement = document.querySelector('#last-country');
+            if (lastCountryElement) {
+              lastCountryElement.innerHTML = `
+            <p>Último país pesquisado: <strong>${lastCountry}</strong></p>
+            <p>Última atualização: <strong>${lastUpdated}</strong></p>
+          `;
+            }
+          } else {
+            console.warn(data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Erro ao buscar o último país:', error);
+        });
+    });
+  </script>
 </body>
 
 </html>
