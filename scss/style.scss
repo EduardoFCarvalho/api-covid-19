@@ -15,6 +15,12 @@
 	font-family: $font_1;
 }
 
+html {
+  scroll-behavior: smooth;
+	scroll-padding-top: 50px;
+}
+
+
 body {
 	background-color: $bgd-body;
 	position: relative;
@@ -48,8 +54,8 @@ section {
 }
 
 .section-padding {
-	padding-top: 5rem;
-	padding-bottom: 5rem;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 	h2,
 	h3,
 	h4,
@@ -164,4 +170,8 @@ section {
 
 .h-100 {
 	height: 100% !important;
+}
+
+.bg-dark {
+  background-color: #303436;
 }

@@ -39,15 +39,24 @@
 
   &.casos,
   &.obitos {
-    padding: 2rem;
+    padding: .5rem;
     text-align: center;
+    @media (min-width: 576px) {
+      padding: 2rem;
+    }
     .card-title {
-      font-size: 1.25rem;
+      font-size: 1rem;
+      @media (min-width: 576px) {
+        font-size: 1.25rem;
+      }
     }
     .card-body {
       .card-text {
-        font-size: 1.5rem;
+        font-size: 1.125rem;
         font-weight: bold;
+        @media (min-width: 576px) {
+          font-size: 1.5rem;
+        }
       }
     }
   }

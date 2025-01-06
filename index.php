@@ -20,7 +20,7 @@
 
   </section>
 
-  <section>
+  <section id="informacoes">
     <div class="container section-padding">
       <div class="row">
         <div class="col-12">
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="comparativo">
     <div class="container section-padding">
       <div class="row">
 
@@ -83,6 +83,13 @@
           </form>
           <div class="row justify-content-center pt-5">
             <!-- Cards de casos de obitos -->
+            <div class="ref"></div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <!-- seção do resultado do comparativo -->
+          <div class="comparResult">
             <div class="ref"></div>
           </div>
         </div>

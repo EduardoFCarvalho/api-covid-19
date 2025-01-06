@@ -2,26 +2,25 @@
     <div class="container">
         <div class="row justify-content-between">
 
-            <div class="col-12">
-                <div id="last-country" class="last-country mb-4">
+            <div class="col-12 mb-5">
+                <div id="last-country" class="last-country">
                     <!-- Informações do último país pesquisado serão inseridas aqui -->
                 </div>
 
             </div>
             <div class="col-12 col-lg-4 mb-5">
                 <div>
-                    <p class="text-justify"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, fugit. Ad quaerat fugit quas nam nobis quam porro quis deleniti aspernatur, nesciunt nemo laudantium fuga vero voluptatem? Sed, necessitatibus iure!</p>
+                    <p class="text-justify">Uma doença infeciosa causada pelo coronavírus da síndrome respiratória aguda grave 2 (SARS-CoV-2). Os sintomas mais comuns são febre, tosse seca e cansaço. Entre outros sintomas menos comuns estão dores musculares, dor de garganta, dor de cabeça, congestão nasal, conjuntivite, perda do olfato e do paladar e erupções cutâneas.</p>
                 </div>
             </div>
 
-            <div class="col-12 col-lg-4 mb-5">
+            <div class="col-12 col-lg-6 mb-5">
                 <div class="links">
                     <h3 class="link-title">Links rápidos</h3>
                     <ul>
-                        <li><a href="./">Home</a></li>
-                        <li><a href="#">Sobre nós</a></li>
-                        <li><a href="#">Serviços</a></li>
-                        <li><a href="#">Contato</a></li>
+                        <li><a href="#informacoes">Informações</a></li>
+                        <li><a href="#comparativo">Comparativo</a></li>
+                        <li><a href="#contato">Contato</a></li>
                     </ul>
                 </div>
             </div>

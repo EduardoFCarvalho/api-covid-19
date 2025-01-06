@@ -49,7 +49,35 @@ async function runComonsScripts() {
       });
     }
 
-    // window.addEventListener('scroll', checkScrollYPosition);
+    window.addEventListener('scroll', checkScrollYPosition);
 
+    const navbar = document.querySelector('.navbar');
+    const menuToggle = document.querySelector('.menu-toggle');
+
+    if (navbar && window.innerWidth >= 768) {
+      if (headerMenu) {
+        headerMenu.classList.add('showed');
+      }
+      if (navbar) {
+        navbar.classList.add('show');
+      }
+    } else {
+      const menuLinks = navbar.querySelectorAll('a');
+      if(menuLinks) {
+        menuLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            if (headerMenu) {
+              headerMenu.classList.remove('showed');
+            }
+            if (navbar) {
+              navbar.classList.remove('show');
+            }
+            if (menuToggle) {
+              menuToggle.classList.remove('open');
+            }
+          });
+        })
+      }
+    }
   }
 } runComonsScripts()

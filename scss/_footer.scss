@@ -37,8 +37,18 @@
     }
 
     ul {
+      display: flex;
+      flex-direction: column;
+      @media (min-width: 768px) {
+        flex-direction: row;
+        justify-content: center;
+      }
       li {
         margin-top: 1.5rem;
+        @media (min-width: 768px) {
+          margin-top: unset;
+          margin-right: 1.5rem;
+        }
       }
     }
   }
@@ -82,9 +92,6 @@
   }
 }
 
-.bg-dark {
-  background-color: #202223;
-}
 
 #back-top {
   display: none;
@@ -123,5 +130,26 @@
               transition: 0.3s ease;
           }
       }
+  }
+}
+
+.last-country {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @media (min-width: 576px) {
+    flex-direction: row;
+  }
+  p {
+    color: lighten($theme-color2, 15);
+    margin: 0 1rem 1rem 1rem;
+    @media (min-width: 576px) {
+      margin-bottom: 0;
+    }
+    strong {
+      color: $theme-color3;
+    }
   }
 }
