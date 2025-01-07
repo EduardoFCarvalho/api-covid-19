@@ -20,7 +20,7 @@
 
   </section>
 
-  <section>
+  <section id="informacoes">
     <div class="container section-padding">
       <div class="row">
         <div class="col-12">
@@ -51,7 +51,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="comparativo">
     <div class="container section-padding">
       <div class="row">
 
@@ -62,27 +62,34 @@
         </div>
 
         <div class="col-6">
-          <form id="comparOne" class="countryForm totalonly" action="#" method="get">
+          <form class="countryForm totalonly" action="#" method="get">
             <label for="selectPais1">País 1:</label>
             <select id="selectPais1">
               <option value="">Carregando...</option>
             </select>
           </form>
-          <div class="row justify-content-center pt-5">
+          <div id="comparOne" class="row justify-content-center pt-5">
             <!-- Cards de casos de obitos -->
             <div class="ref"></div>
           </div>
         </div>
 
         <div class="col-6">
-          <form id="compartwo" class="countryForm totalonly" action="#" method="get">
+          <form class="countryForm totalonly" action="#" method="get">
             <label for="selectPais2">País 2:</label>
             <select id="selectPais2">
               <option value="">Carregando...</option>
             </select>
           </form>
-          <div class="row justify-content-center pt-5">
+          <div id="compartwo" class="row justify-content-center pt-5">
             <!-- Cards de casos de obitos -->
+            <div class="ref"></div>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <!-- seção do resultado do comparativo -->
+          <div class="comparResult">
             <div class="ref"></div>
           </div>
         </div>
@@ -96,6 +103,34 @@
   <?php include 'modules/footer.php' ?>
 
   <?php include 'modules/js.geral.php' ?>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Requisição para buscar o último país pesquisado
+      fetch('get_last_country.php')
+        .then(response => response.json())
+        .then(data => {
+          if (data.status === 'success') {
+            const lastCountry = data.data.pais;
+            const lastUpdated = new Date(data.data.updated_at).toLocaleString('pt-BR');
+
+            // Exibir as informações na página
+            const lastCountryElement = document.querySelector('#last-country');
+            if (lastCountryElement) {
+              lastCountryElement.innerHTML = `
+            <p>Último país pesquisado: <strong>${lastCountry}</strong></p>
+            <p>Última atualização: <strong>${lastUpdated}</strong></p>
+          `;
+            }
+          } else {
+            console.warn(data.message);
+          }
+        })
+        .catch(error => {
+          console.error('Erro ao buscar o último país:', error);
+        });
+    });
+  </script>
 </body>
 
 </html>

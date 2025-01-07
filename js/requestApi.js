@@ -16,7 +16,15 @@ formsSelects.forEach(formSelect => {
 
     const selectedCountry = formSelect.value;
 
-    fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`)
+    // fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`)
+    //   .then(response => response.json())
+    fetch(`register_access.php?pais=${selectedCountry}`)
+      .then(registerResponse => {
+        if (!registerResponse.ok) {
+          console.error('Erro ao registrar acesso no banco de dados');
+        }
+        return fetch(`https://dev.kidopilabs.com.br/exercicio/covid.php?pais=${selectedCountry}`);
+      })
       .then(response => response.json())
       .then(data => {
         let totalConfirmados = 0;
@@ -34,7 +42,7 @@ formsSelects.forEach(formSelect => {
       <div class="card casos">
         <span class="card-title">Total de casos confirmados</span>
         <div class="card-body">
-          <p class="card-text">${totalConfirmados.toLocaleString('pt-BR')}</p>
+          <p id="totalConfirmados" class="card-text">${totalConfirmados.toLocaleString('pt-BR')}</p>
         </div>
       </div>
     `;
@@ -47,7 +55,7 @@ formsSelects.forEach(formSelect => {
       <div class="card obitos">
         <span class="card-title">Total de óbitos</span>
         <div class="card-body">
-          <p class="card-text">${totalMortos.toLocaleString('pt-BR')}</p>
+          <p id="totalMortos" class="card-text">${totalMortos.toLocaleString('pt-BR')}</p>
         </div>
       </div>
     `;
