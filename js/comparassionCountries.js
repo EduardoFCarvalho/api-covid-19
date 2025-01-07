@@ -55,9 +55,9 @@ function calcularTaxaMortes() {
 
   cardTaxa.innerHTML = `
     <div class="card taxa">
-      <span class="card-title">Diferença de Taxa de Mortes</span>
+      <span class="card-title">Diferença da Taxa de Mortes</span>
       <div class="card-body">
-        <p class="card-text">${diferencaTaxas.toFixed(2)}%</p>
+        <p class="card-text"><b>${diferencaTaxas.toFixed(2)}%</b></p>
       </div>
     </div>
   `;
