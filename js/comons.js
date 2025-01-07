@@ -7,7 +7,7 @@ async function runComonsScripts() {
 
     function checkScrollYPosition(ev) {
       let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-      console.log(`scrollTop: ${scrollTop}`);
+      // console.log(`scrollTop: ${scrollTop}`);
 
       scrollTop = Math.round(scrollTop); // arredonda para o valor inteiro mais próximo
       if (scrollDiff !== scrollTop) {

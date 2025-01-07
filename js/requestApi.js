@@ -42,7 +42,7 @@ formsSelects.forEach(formSelect => {
       <div class="card casos">
         <span class="card-title">Total de casos confirmados</span>
         <div class="card-body">
-          <p class="card-text">${totalConfirmados.toLocaleString('pt-BR')}</p>
+          <p id="totalConfirmados" class="card-text">${totalConfirmados.toLocaleString('pt-BR')}</p>
         </div>
       </div>
     `;
@@ -55,7 +55,7 @@ formsSelects.forEach(formSelect => {
       <div class="card obitos">
         <span class="card-title">Total de óbitos</span>
         <div class="card-body">
-          <p class="card-text">${totalMortos.toLocaleString('pt-BR')}</p>
+          <p id="totalMortos" class="card-text">${totalMortos.toLocaleString('pt-BR')}</p>
         </div>
       </div>
     `;

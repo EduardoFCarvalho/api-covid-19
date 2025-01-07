@@ -74,3 +74,16 @@
     text-align: center;
   }
 }
+
+.comparResult {
+  display: flex;
+  justify-content: center;
+  .taxa {
+    .card-text {
+      flex-direction: row;
+      i{
+        margin: 0 5px;
+      }
+    }
+  }
+}

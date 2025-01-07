@@ -62,26 +62,26 @@
         </div>
 
         <div class="col-6">
-          <form id="comparOne" class="countryForm totalonly" action="#" method="get">
+          <form class="countryForm totalonly" action="#" method="get">
             <label for="selectPais1">País 1:</label>
             <select id="selectPais1">
               <option value="">Carregando...</option>
             </select>
           </form>
-          <div class="row justify-content-center pt-5">
+          <div id="comparOne" class="row justify-content-center pt-5">
             <!-- Cards de casos de obitos -->
             <div class="ref"></div>
           </div>
         </div>
 
         <div class="col-6">
-          <form id="compartwo" class="countryForm totalonly" action="#" method="get">
+          <form class="countryForm totalonly" action="#" method="get">
             <label for="selectPais2">País 2:</label>
             <select id="selectPais2">
               <option value="">Carregando...</option>
             </select>
           </form>
-          <div class="row justify-content-center pt-5">
+          <div id="compartwo" class="row justify-content-center pt-5">
             <!-- Cards de casos de obitos -->
             <div class="ref"></div>
           </div>
