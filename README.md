@@ -32,7 +32,7 @@ Bônus:
 
 ## Procedimentos
 
-### Arquivos
+### - Arquivos
 Baixe os arquivo ZIP ou clone o repositório dentro do seu ambiente de desenvolvimento (pasta www do Laragon ou htdocs do Xampp)
 
 ```sh
