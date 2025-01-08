@@ -58,7 +58,8 @@ Concluindo os passos anteriores e confirmando que seu gerenciador de ambientes e
 
 Vamos ajustar a tag base do projeto para uma visualização correta, se necessário
 
-No navegador acesse localhost/caminho (nome da pasta) que se encontra os arquivos, exemplo [localhost/api-covid-19](localhost/api-covid-19)
+No navegador acesse localhost/caminho (nome da pasta) que se encontra os arquivos
+Exemplo: [http://localhost/api-covid-19](http://localhost/api-covid-19)
 
 Se o carregamento da página apresentar falhas na visualização mas os textos estiverem aparecendo, copie o link completo dessa página, nos arquivos na pasta modules em config atualize o parâmetro definido CONF_TAG_BASE para o ambiente local.
 
