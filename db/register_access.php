@@ -1,5 +1,5 @@
 <?php
-include_once './modules/config.php';
+include_once '../modules/config.php';
 // Configurações do banco de dados
 $host = CONF_DB_HOST;
 $dbname = CONF_DB_NAME;

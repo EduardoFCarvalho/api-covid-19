@@ -107,7 +107,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       // Requisição para buscar o último país pesquisado
-      fetch('get_last_country.php')
+      fetch('db/get_last_country.php')
         .then(response => response.json())
         .then(data => {
           if (data.status === 'success') {

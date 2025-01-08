@@ -20,7 +20,11 @@
 
   .card-body {
     display: flex;
+    flex-direction: column;
     justify-content: space-evenly;
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
     .card-text {
       display: flex;
       flex-direction: column;
