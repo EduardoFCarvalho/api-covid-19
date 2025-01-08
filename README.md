@@ -39,7 +39,7 @@ Baixe os arquivo ZIP ou clone o repositório dentro do seu ambiente de desenvolv
 git clone https://github.com/EduardoFCarvalho/api-covid-19.git
 ```
 
-### Ambiente de desenvolvimento e banco de dados
+### - Ambiente de desenvolvimento e banco de dados
 Abra e inicie seu gerenciador do ambiente de desenvolvimento, clique em admin / Banco de dados para acessar o phpMyAdmin
 
 Obs: Normalmente por padrão o Xampp já vem com esse gerenciador, mas se você estiver usando o Laragon pode ser necessário uma rápida configuração, para saber mais acesse o tutorial a seguir:
@@ -52,7 +52,7 @@ Após criar, acessa-lo e carregar o arquivo .sql que está pasta Extras, este co
 
 Em seguida entre no diretório Modules no arquivo Config e vá até a seção correspondente de configurações de conexão do banco e cheque se estão alinhadas com o que você criou, se necessário ajuste
 
-### Utilizando em ambiente local
+### - Utilizando em ambiente local
 
 Concluindo os passos anteriores e confirmando que seu gerenciador de ambientes está ativo
 
@@ -67,6 +67,6 @@ Se o carregamento da página apresentar falhas na visualização mas os textos e
 Atualize a página e estará pronto para uso.
 
 
-## Informações adicionais
+# Informações adicionais
 
 No responsivo ao mudar a resolução de tela, atualizar a página para que todas as funcionalidade funcionem adequadamente, como o intuito não é trabalhar com alterações da largura da tela de forma constante preferi uma abordagem que utilizasse menos memória do navegador evitando assim o uso de funções de monitoramento.
